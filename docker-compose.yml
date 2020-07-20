@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  loc:
+    stdin_open: true
+    tty: true
+    build: .
+    volumes:
+      - ".:/app"
+      - "~/.aws:/root/.aws"
+      - "~/.bash_history:/root/.bash_history"
+      - "~/.bash_aliases:/root/.bash_aliases"
+
+    command:
+      ["pipenv", "run", "loc"]
+
+  pass:
+    stdin_open: true
+    tty: true
+    build: .
+    volumes:
+      - ".:/app"
+      - "~/.aws:/root/.aws"
+      - "~/.bash_history:/root/.bash_history"
+      - "~/.bash_aliases:/root/.bash_aliases"
+
+    command:
+      ["pipenv", "run", "pass"]
+
+  lint:
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: "./Dockerfile.test"
+    volumes:
+      - ".:/app"
+      - "~/.aws:/root/.aws"
+
+    command:
+      ["pipenv", "run", "lint"]
+
+  unit-tests:
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: "./Dockerfile.test"
+    volumes:
+      - ".:/app"
+      - "~/.aws:/root/.aws"
+
+    command:
+      ["pipenv", "run", "unit"]

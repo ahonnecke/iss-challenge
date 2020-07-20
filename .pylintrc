@@ -1,0 +1,5 @@
+[BASIC]
+good-names=s4,w3,df,e,logger,i
+
+[MESSAGES CONTROL]
+disable=C0330,logging-fstring-interpolation

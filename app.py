@@ -29,7 +29,7 @@ def _loc():
     url = "/".join([BASE_API, "iss-now.json"])
     body = requests.get(url).json()
     print(
-        f"The ISS currnet location at {body['timestamp']} is "
+        f"The ISS current location at {body['timestamp']} is "
         f"{body['iss_position']['latitude']}, {body['iss_position']['longitude']}"
     )
 

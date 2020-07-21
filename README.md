@@ -1,4 +1,4 @@
-# Details
+# Instructions
 
 There is an API (http://api.open-notify.org/) that provides information on the
 International Space Station. Documentation is provided via the website, along
@@ -25,11 +25,23 @@ for each craft print the details of those people that are currently in space
 When finished send me back your results! I am looking forward to hearing your
 thoughts.
 
-## Usage
+# Installation
+ * Install docker
+ * Install docker compose
+ * Build
+
+
+``` bash
+ahonnecke@homonym:~/Documents/professional/challenges/brooksource$ docker-compose build
+Building loc
+...
+```
+
+# Usage
 
 ``` bash
 ahonnecke@homonym:~/Documents/professional/challenges/brooksource$ docker-compose run app loc
-The ISS currnet location at 1595297080 is 44.7975, -97.9406
+The ISS current location at 1595297080 is 44.7975, -97.9406
 ```
 
 ``` bash

@@ -6,7 +6,7 @@ name = "pypi"
 [scripts]
 loc = "python /app/app.py loc"
 pass = "python /app/app.py pass"
-app = "python /app/app.py"
+people = "python /app/app.py people"
 lint = "/app/bin/lint.sh"
 unit = "/app/bin/unit_tests.sh"
 

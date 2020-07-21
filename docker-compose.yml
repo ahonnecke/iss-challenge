@@ -27,6 +27,16 @@ services:
     command:
       ["pipenv", "run", "pass"]
 
+  app:
+    stdin_open: true
+    tty: true
+    build: .
+    volumes:
+      - ".:/app"
+      - "~/.aws:/root/.aws"
+      - "~/.bash_history:/root/.bash_history"
+      - "~/.bash_aliases:/root/.bash_aliases"
+
   lint:
     stdin_open: true
     tty: true

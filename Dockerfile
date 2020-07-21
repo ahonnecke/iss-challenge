@@ -16,4 +16,4 @@ COPY Pipfile* ./
 RUN pipenv install --deploy
 COPY . .
 
-CMD pipenv run app
+ENTRYPOINT ["pipenv", "run"]
